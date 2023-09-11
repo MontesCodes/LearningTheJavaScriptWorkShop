@@ -7,7 +7,6 @@
 
 ## Software tools being used:
 
-<a href="https://www.amazon.com/dp/B07FQSH2NX/ref=sspa_dk_detail_0?psc=1&pd_rd_i=B07FQSH2NX&pd_rd_w=cPHga&content-id=amzn1.sym.f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_p=f734d1a2-0bf9-4a26-ad34-2e1b969a5a75&pf_rd_r=M3F48H7KHH3HH7ZXSK7M&pd_rd_wg=aejmu&pd_rd_r=9414270b-5b99-4e71-ad74-bf384898d850&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw"><img src="https://m.media-amazon.com/images/I/41f4XjiRB+L.jpg" alt="The JavaScript Workshop" height="280px" width="230px" align="right" this.target="_blank"></a>
 <a href="https://www.amazon.com/JavaScript-Workshop-Interactive-Approach-Learning-ebook/dp/B0824584WF/ref=sr_1_1?dchild=1&keywords=The%20JavaScript%20Workshop&qid=1611056880&sr=8-1&utm_source=GitHub&utm_medium=Repository&utm_campaign=9781838641917&utm_term=JavaScript&utm_content=The%20JavaScript%20Workshop"><img src="https://github.com/PacktWorkshops/Workshop-Covers/blob/master/The%20JavaScript%20Workshop.png" alt="The JavaScript Workshop" height="280px" width="230px" align="right" this.target="_blank"></a>
 
 On getting started with the project files, I downloaded and installed:
