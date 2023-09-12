@@ -1,4 +1,4 @@
-var keyNames = 'WASDwasdIJKMijkm';
+var keyNames = 'WASDwasdIJKMijkmRTXPrtxp';
 var keyName = keyNames.charAt(Math.floor(Math.random() * keyNames.length));
 console.log('keyName:', keyName);
 switch (keyName.toLowerCase()) {
@@ -17,5 +17,8 @@ switch (keyName.toLowerCase()) {
   case 's':
   case 'm':
     console.log('move down');
+    break;
+  default:
+    console.log('invalid key');
     break;
 }
