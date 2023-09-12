@@ -16,6 +16,14 @@ var stopWatch = {
     console.log('stop');
   },
 };
-for (let name of stopWatch) {
-  console.log(name, ':', stopWatch[name]);
+// for (let name of stopWatch) {
+//   console.log(name, ':', stopWatch[name]);
+// }
+
+let anyString = 'abcxyz123';
+// for (const value of anyString) {
+//   console.log(value);
+// }
+for (var i = 0; i < anyString.length; i++) {
+  console.log(anyString.charAt(i));
 }
