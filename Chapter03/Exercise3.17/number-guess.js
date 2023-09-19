@@ -1,3 +1,8 @@
+let resultsMsgEle = document.getElementById('results-msg');
+let matchedMsgEle = document.getElementById('match-msg');
+let noMatchMsgEle = document.getElementById('no-match-msg');
+let numberToGuessEle = document.getElementById('number-to-guess');
+let guessInputEle = document.getElementById('number-guessed');
 let testButtonEle = document.getElementById('test-button');
 testButtonEle.addEventListener('click', testMatch);
 
