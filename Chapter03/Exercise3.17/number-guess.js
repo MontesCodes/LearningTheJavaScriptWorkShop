@@ -7,5 +7,8 @@ let testButtonEle = document.getElementById('test-button');
 testButtonEle.addEventListener('click', testMatch);
 
 function testMatch(e) {
-  console.log('Clicked!');
+  //   console.log('Clicked!');
+  let numberGuessed = parseInt(guessInputEle.value);
+  if (!isNaN(numberGuessed) && numberGuessed > 0 && numberGuessed <= 10) {
+  }
 }
