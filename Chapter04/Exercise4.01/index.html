@@ -1,11 +1,24 @@
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.15/lodash.min.js"></script>
     <script type="text/javascript">
       const exampleArray = [1, 5, 5, 2, 6, 7, 2, 1];
       const uniqueArray = _.uniq(exampleArray)
       console.log(uniqueArray)
       // => [1,5,2,6,7]
+    </script> -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script type="text/javascript">
+      // Create an array with duplicated values
+      const exampleArray = [1, 5, 5, 2, 6, 7, 2, 1];
+      // use lodash.uniq to make the array contain unique values
+      const uniqueArray = _.uniq(exampleArray);
+      // Print the unique array to the console
+      console.log(uniqueArray);
+      // => [1, 5, 2, 6, 7]
     </script>
   </head>
 </html>

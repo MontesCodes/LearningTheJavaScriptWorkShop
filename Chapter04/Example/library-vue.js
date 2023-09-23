@@ -20,7 +20,7 @@ new Vue({
       this.text = e.target.value
     }
   }
-})
+}) 
 // -----------------------------------------------------------------
 // => renders a page with an input field
 // => and a div that displays the inputs value
