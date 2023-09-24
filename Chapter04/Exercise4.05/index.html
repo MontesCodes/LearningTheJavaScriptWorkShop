@@ -1,22 +1,19 @@
 <html>
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.9.0/umd/react.production.min.js" charset="utf-8"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.8.6/umd/react-dom.production.min.js" charset="utf-8"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"
+      integrity="sha512-8kQSjoZXlAITqjOa1gXxk5xLdoy9oQ5dJYRVbj1MyWsrShhx5jOQ1mFqppLjmIQLBr5feS0C3BP3niDNKaXPrw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+      integrity="sha512-qDBo/uEU9Ha40dzym+0t3Y18P3dxLOM85oO6qOTG2C+/yn+na2bIcbRH821hcwKtUpJR946k0PkrR6Lp79OxXw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
   </head>
-
   <body>
     <div id="root"></div>
-    <script type="text/javascript">
-      const todoListItems = [
-        'buy flowers',
-        'tidy up',
-        'go to the gym'
-      ];
-
-      const todoListElements = todoListItems.map(item =>
-        React.createElement('li', null, item)
-      );
-      ReactDOM.render(todoListElements, document.getElementById('root'));
-    </script>
   </body>
 </html>
