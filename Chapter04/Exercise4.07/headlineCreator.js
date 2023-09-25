@@ -16,7 +16,7 @@
 window.headlineCreator = (function () {
   function createHeadline(text, parentElementSelector = '#root') {
     const parentElement = document.querySelector(parentElementSelector);
-    if (!test) {
+    if (!text) {
       throw new Error('You Forgot To Pass The "text" Parameter');
     }
     if (!parentElement) {
