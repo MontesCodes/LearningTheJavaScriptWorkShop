@@ -19,4 +19,4 @@ function sendEmail(name, age, comments) {
   comments: ${comments}`;
   return body;
 }
-sendEmail('Kelly', 39, 'Your WebSite is Fantastic!');
+console.log(sendEmail('Kelly', 39, 'Your WebSite is Fantastic!'));
