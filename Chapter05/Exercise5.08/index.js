@@ -1,0 +1,16 @@
+function curry(prim, fun) {
+  if (typeof fun != 'function') return;
+  var ret = function () {
+    return fun(prim);
+  };
+  return ret;
+}
+
+var fun = function (val) {
+  return val + 50;
+};
+var curry1 = curry(99, fun);
+console.log(curry1());
+console.log(curry1());
+var curry2 = curry('bob', fun);
+console.log(curry2());
