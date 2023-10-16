@@ -167,3 +167,161 @@ var gameState = {
     }
   },
 };
+
+/// Array literal
+var myArray = [1, 2, 3];
+var myEmptyArray = [];
+
+/// access Array using integer indexes
+myValue = myArray[3];
+
+/// array constructor - equivalent examples
+var arr1 = [1, 2, 3];
+var arr2 = new Array(1, 2, 3);
+
+/// constructor form - passing a single integer
+var arr = new Array(3);
+console.log(arr);
+// expected -> (3) [empty x3]
+
+/// Array is the index - when using for...in
+for (var i in myArray) {
+  console.log(myArray[i]);
+}
+
+/// Array object provides the Length property
+for (let i = 0; i < myArray.length; i++) {
+  console.log(myArray[i]);
+}
+
+/// indexOf
+var arr = [1, 'b', true];
+arr.indexOf('b');
+// expected -> 1
+
+/// check array index is higher than -1
+var searchedValue = 'b';
+if (arr.indexOf(searchedValue) > -1) {
+  console.log('match found');
+}
+
+/// if element exist within Array by reference
+var obj = { name: 'bob' };
+var arr = ['a', 99, obj];
+console.log(arr.indexOf(obj));
+// expected -> 2
+console.log(arr.indexOf({ name: 'bob' }));
+// expected -> -1
+
+/// update the hour of the Date instance
+var d = Date();
+d.setHours(12);
+
+/// calling the parse method:
+var greatDate = Date.parse('November 3, 1976');
+console.log(greatDate);
+
+/// passing milliseconds to the Date constructor:
+var millis = Date.parse('November 3, 1976');
+var greatDate = new Date(millis);
+console.log(greatDate);
+
+//@ use a Date instance as a string
+var d = new Date();
+console.log(d);
+
+//@ Date: override the toString function of the object
+var toString = function (date) {
+  date = date || this;
+  var months = [
+    'Jan',
+    'Feb',
+    'Mar',
+    'Apr',
+    'May',
+    'Jun',
+    'Jul',
+    'Aug',
+    'Sep',
+    'Oct',
+    'Nov',
+    'Dec',
+  ];
+  var day = date.getDae();
+  var mnth = date.getMonth();
+  var year = date.getFullYear();
+  return day + ' ' + months[mnth] + ' ' + year;
+};
+var d = new Date();
+d.toString = toString;
+console.log(d);
+
+//@ Date: dates wish to difference in milliseconds
+var date1 = new Date('Dec 25 2001').getTime();
+var date2 = new Date('Dec 25 2019').getTime();
+var diff = date2 - date1;
+diff;
+
+//@ convert that into a time unit
+var day = 1000 * 60 * 60 * 24;
+var numDays = diff / day;
+numDays;
+
+//@ Date: Roll over values that exceed the next largest unit
+var d = new Date('apr 26 2023');
+d.setMonth(d.getMonth() + 60);
+d;
+
+//@ Creating a To-Do Model
+let todos = [];
+function modelFindIndex(state, id) {
+  for (let i = 0; i < state.length; i++) {
+    if (state[i].id == id) {
+      return i;
+    }
+  }
+  return -1;
+}
+function modelStateChange(state, action, data) {
+  if ((action = 'CREATE')) {
+    data['createdAt'] = new Date();
+    data['updatedAt'] = new Date();
+    data['completed'] = false;
+    console.log('created:', data);
+    return state.concat(data);
+  }
+  if (action == 'REMOVE') {
+    let item = modelFindIndex(state, data.id);
+    if (item > -1) {
+      console.log('removed', state[item]);
+      delete state[item];
+      return state;
+    }
+  }
+  if (action == 'MODIFY') {
+    let modifyItem = state.splice(item, 1);
+    modifyItem[0]['updatedAt'] = new Date();
+    modifyItem[0]['completed'] = data.completed;
+    console.log('modified item', modifyItem[0]);
+    state[item] = modifyItem[0];
+    console.log('complete array:', state);
+    return state;
+  }
+}
+todos = modelStateChange(todos, 'CREATE', {
+  id: 1,
+  title: 'Learning JS',
+  description: 'Getting the hang of Learning JS',
+});
+todos = modelStateChange(todos, 'CREATE', {
+  id: 2,
+  title: 'Learning Event',
+  description: 'Getting the hang of Events in JS',
+});
+todos = modelStateChange(todos, 'MODIFY', {
+  id: 2,
+  completed: true,
+});
+todos = modelStateChange(todos, 'REMOVE', {
+  id: '1',
+});

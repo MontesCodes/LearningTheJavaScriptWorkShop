@@ -1,7 +1,7 @@
 let todos = [];
 
 function modelFindIndex(state, id) {
-  for (let i=0; i<state.length; i++) {
+  for (let i = 0; i < state.length; i++) {
     if (state[i].id == id) {
       return i;
     }
@@ -10,36 +10,34 @@ function modelFindIndex(state, id) {
 }
 
 function modelStateChange(state, action, data) {
-  if (action == "CREATE") {
+  if (action == 'CREATE') {
     data['createdAt'] = new Date();
-       data['updatedAt'] = new Date();
-       data['completed'] = false;
-       console.log("created:", data);
+    data['updatedAt'] = new Date();
+    data['completed'] = false;
+    console.log('created:', data);
     return state.concat(data);
   }
-  if (action == "REMOVE") {
-   let item = modelFindIndex(state, data.id);
-       if (item > -1) {
-          console.log("removed", state[item]);
-          delete state[item];
-          return state
-       }
+  if (action == 'REMOVE') {
+    let item = modelFindIndex(state, data.id);
+    if (item > -1) {
+      console.log('removed', state[item]);
+      delete state[item];
+      return state;
     }
-  if (action == "MODIFY") {
-  let modifyItem = state.splice(item, 1
-);
+  }
+  if (action == 'MODIFY') {
+    let modifyItem = state.splice(item, 1);
 
-modifyItem[0]['updatedAt'] = new Date();
-modifyItem[0]['completed'] = data.completed;
-console.log("modified item", modifyItem[0]);
-state[item]= modifyItem[0];
-console.log("complete array:", state);
-return state
+    modifyItem[0]['updatedAt'] = new Date();
+    modifyItem[0]['completed'] = data.completed;
+    console.log('modified item', modifyItem[0]);
+    state[item] = modifyItem[0];
+    console.log('complete array:', state);
+    return state;
+  }
 }
 
-}
-
-}
+// }
 
 // call CREATE Method
 
