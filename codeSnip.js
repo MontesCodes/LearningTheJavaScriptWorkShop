@@ -325,3 +325,83 @@ todos = modelStateChange(todos, 'MODIFY', {
 todos = modelStateChange(todos, 'REMOVE', {
   id: '1',
 });
+
+//@ UnderstandingCoreConcepts: timer function
+var timerFunction = function () {
+  var time = new Date().getTime();
+  console.log(time);
+};
+console.log(setInterval(timerFunction, 500));
+
+//@ UnderstandingCoreConcepts: timer function 2
+function main() {
+  setInterval(() => console.log('executed'), 500);
+  console.log('after execution');
+  console.log('another message');
+}
+console.log(main());
+
+//@ UnderstandingCoreConcepts: terminate interval loop
+var ref = setInterval(someFunc, 100);
+clearInterval(ref);
+
+//@ UnderstandingCoreConcepts: delay process for period of time
+setTimeout(someFunc, 500);
+
+//@ UnderstandingCoreConcepts: cancel setTimeout before execute
+var ref = setTimeout(() => console.log('fire!'), 200);
+setInterval(function () {
+  console.log('waiting...');
+  clearTimeout(ref);
+}, 100);
+
+//@ UnderstandingCoreConcepts:setTimeout mimicked by setInterval
+let ref = setInterval(function () {
+  console.log('Boo!');
+  clearInterval(ref);
+}, 500);
+
+//@ UnderstandingCoreConcepts:timer Additional parameters passed to callback
+let handler = function (p1, p2) {
+  console.log(p1, p2);
+};
+console.log(setTimeout(handler, 100, 'Hello,', 'World!'));
+
+//@ UnderstandingCoreConcepts:older browser parameters passed to callback
+setTimeout(function () {
+  handler('Hello,', 'World!');
+}, 100);
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
