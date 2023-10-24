@@ -372,6 +372,56 @@ setTimeout(function () {
   handler('Hello,', 'World!');
 }, 100);
 
+//@ UnderstandingCoreConcepts: Real-Time Clock
+var secs,
+  mins,
+  hrs,
+  date,
+  setTime = function () {
+    date = new Date();
+    hrs = date.getHours();
+    mins = date.getMinutes();
+    secs = date.getSeconds();
+    document.body.innerHTML = `${hrs}: ${mins}:${secs}`;
+  };
+console.log(setInterval(setTime, 500));
+
+//@ UnderstandingCoreConcepts:attribute accessors
+var document = document.documentElement;
+var bodyNode = document.body;
+console.log(bodyNode);
+
+//@ UnderstandingCoreConcepts:property return null or empty array
+var image = document.body.firstChild.firstChild;
+console.log(image);
+let btn = image.parentNode.nextSibling.firstChild.childNodes[1];
+console.log(btn);
+
+//@ UnderstandingCoreConcepts:getElementById method of the document object
+let node = document.getElementById('myTagId');
+
+//@ UnderstandingCoreConcepts: addEventListener
+document.body.addEventListener('click', () => alert('I was clicked'));
+
+//@ UnderstandingCoreConcepts: MouseEvent objects
+document.body.addEventListener('click', function (evt) {
+  console.log(evt);
+});
+
+//@ UnderstandingCoreConcepts: functionReferenceNoDisplayed
+var display = () => console.log('Clicked');
+document.body.addEventHandler('click', () => console.log('I was Clicked'));
+document.body.addEventHandler('click', () => console.log('I was Clicked'));
+document.body.addEventHandler('click', display);
+document.body.addEventHandler('click', display); //@ this one will not be output
+
+//@ UnderstandingCoreConcepts: removeEventListener
+document.body.removeEventListener('click', display);
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
 //@ UnderstandingCoreConcepts:
 
 //@ UnderstandingCoreConcepts:
