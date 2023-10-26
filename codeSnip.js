@@ -418,7 +418,17 @@ document.body.addEventHandler('click', display); //@ this one will not be output
 //@ UnderstandingCoreConcepts: removeEventListener
 document.body.removeEventListener('click', display);
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:Exercise Tabbed Content
+var btn1 = document.getElementById('btn1'),
+  btn2 = document.getElementById('btn2'),
+  btn3 = document.getElementById('btn3'),
+  container = document.getElementById('container');
+var content1 = 'Button 1 was pressed';
+content2 = 'Button 2 was pressed';
+content3 = 'Button 3 was pressed';
+btn1.addEventListener('click', () => (container.innerHTML = content1));
+btn2.addEventListener('click', () => (container.innerHTML = content2));
+btn3.addEventListener('click', () => (container.innerHTML = content3));
 
 //@ UnderstandingCoreConcepts:
 
