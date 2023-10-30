@@ -442,8 +442,8 @@ document.body.addEventListener('click', clickHandler, true);
 //@ UnderstandingCoreConcepts:remove and event already added with useCapture
 document.body.removeEventListener('click', clickHandler, true);
 
-//@ UnderstandingCoreConcepts:stopImmediatePropagation
-let handler = function (ev) {
+//@ UnderstandingCoreConcepts: stopImmediatePropagation
+let handler1 = function (ev) {
   if (ev.target.value.length < 6) {
     ev.stopImmediatePropagation();
   }
