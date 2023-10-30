@@ -419,22 +419,28 @@ document.body.addEventHandler('click', display); //@ this one will not be output
 document.body.removeEventListener('click', display);
 
 //@ UnderstandingCoreConcepts:Exercise Tabbed Content
-var btn1 = document.getElementById('btn1'),
-  btn2 = document.getElementById('btn2'),
-  btn3 = document.getElementById('btn3'),
+var button1 = document.getElementById('btn1'),
+  button2 = document.getElementById('btn2'),
+  button3 = document.getElementById('btn3'),
   container = document.getElementById('container');
 var content1 = 'Button 1 was pressed';
 content2 = 'Button 2 was pressed';
 content3 = 'Button 3 was pressed';
-btn1.addEventListener('click', () => (container.innerHTML = content1));
-btn2.addEventListener('click', () => (container.innerHTML = content2));
-btn3.addEventListener('click', () => (container.innerHTML = content3));
+button1.addEventListener('click', () => (container.innerHTML = content1));
+button2.addEventListener('click', () => (container.innerHTML = content2));
+button3.addEventListener('click', () => (container.innerHTML = content3));
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: useCapture parameter
+var clickHandler = () => console.log('clicked');
+document.body.addEventListener('click', clickHandler);
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: capturing/bubbling:function called twice
+let clickHandler = () => console.log('clicked');
+document.body.addEventListener('click', clickHandler);
+document.body.addEventListener('click', clickHandler, true);
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:remove and event already added with useCapture
+document.body.removeEventListener('click', clickHandler, true);
 
 //@ UnderstandingCoreConcepts:
 
