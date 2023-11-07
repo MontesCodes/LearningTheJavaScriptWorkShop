@@ -449,11 +449,23 @@ let handler1 = function (ev) {
   }
 };
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: stopEventActions
+let handler3 = function (ev) {
+  ev.preventDefault();
+};
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: callBothTypesOfMethod
+let handler4 = function (ev) {
+  ev.stopPropagation();
+  ev.preventDefault();
+};
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: setCancelable
+let handler5 = function (ev) {
+  if (ev.cancelable) {
+    ev.preventDefault();
+  }
+};
 
 //@ UnderstandingCoreConcepts:
 
