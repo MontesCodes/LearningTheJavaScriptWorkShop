@@ -467,13 +467,22 @@ let handler5 = function (ev) {
   }
 };
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:instance of an Event
+let ev = new Event('click');
+someNode.dispatchEvent(ev);
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:detail property parameter
+let event2 = CustomEvent('click', { detail: 1234 });
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:referencing detail property parameter
+let handler6 = function (ev) {
+  let value = ev.detail;
+};
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:any Named String can be passed into event object
+let event3 = new CustomEvent2('myEvent', { detail: 421 });
+someContainer1.addEventListener('myEvent', someEventHandler);
+someNode.dispatchEvent(event3);
 
 //@ UnderstandingCoreConcepts:
 
