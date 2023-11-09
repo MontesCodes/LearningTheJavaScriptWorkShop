@@ -484,9 +484,11 @@ let event3 = new CustomEvent2('myEvent', { detail: 421 });
 someContainer1.addEventListener('myEvent', someEventHandler);
 someNode.dispatchEvent(event3);
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:event Attributes
+<div id='someNode' onclick='someFunction();'></div>;
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:semi-colon distinguish separate statements
+<div id='someNode' onclick='someFun1(); someFun2();'></div>;
 
 //@ UnderstandingCoreConcepts:
 
