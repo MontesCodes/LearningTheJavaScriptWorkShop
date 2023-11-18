@@ -490,6 +490,20 @@ someNode.dispatchEvent(event3);
 //@ UnderstandingCoreConcepts:semi-colon distinguish separate statements
 <div id='someNode' onclick='someFun1(); someFun2();'></div>;
 
+//@ UnderstandingCoreConcepts:return false value handling jQuery event
+function formHandler1(ev) {
+  if (document.getElementById('password').value().length < 3) {
+    alert('Password is too short');
+    return false;
+  }
+}
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
+//@ UnderstandingCoreConcepts:
+
 //@ UnderstandingCoreConcepts:
 
 //@ UnderstandingCoreConcepts:
