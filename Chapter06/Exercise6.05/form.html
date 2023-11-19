@@ -16,6 +16,14 @@
         console.log('form has been reset');
       }
       document.getElementById('myForm').addEventListener('reset', resetHandler);
+
+      function submitHandler(ev) {
+        console.log('form has been submitted');
+        ev.preventDefault();
+      }
+      document
+        .getElementById('myForm')
+        .addEventListener('submit', submitHandler);
     </script>
   </body>
 </html>
