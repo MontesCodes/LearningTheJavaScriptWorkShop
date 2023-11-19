@@ -498,7 +498,8 @@ function formHandler1(ev) {
   }
 }
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:reset method: form node
+document.getElementsByTagName('form')[0].reset();
 
 //@ UnderstandingCoreConcepts:
 
