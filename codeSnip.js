@@ -501,7 +501,10 @@ function formHandler1(ev) {
 //@ UnderstandingCoreConcepts:reset method: form node
 document.getElementsByTagName('form')[0].reset();
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts:assigning form reset event
+document
+  .getElementsByTagName('form')[0]
+  .addEventListener('reset', myResetHandler);
 
 //@ UnderstandingCoreConcepts:
 
