@@ -31,6 +31,42 @@
     <!-- UnderstandingCoreConcepts: button control no default action-->
     <input type="button" onclick="buttonHandler();" value="Clickable Button" />
 
+    <!-- UnderstandingCoreConcepts: alternative button tag-->
+    <button onclick="buttonHandler();">Clickable Button</button>
+
+    <!-- UnderstandingCoreConcepts: checkbox control-->
+    <input type="checkbox" checked />
+
+    <!-- UnderstandingCoreConcepts: alternative to checked valueless-->
+    <input type="checkbox" checked="checked" />
+
+    <!-- UnderstandingCoreConcepts: check the checked status javaScript-->
+    <input type="checkbox" value="1" id="check" checked />
+    <script>
+      var chk = document.getElementById('check');
+      console.log(chk.checked);
+    </script>
+
+    <!-- UnderstandingCoreConcepts: Radio control submit form-->
+    <input type="radio" name="color" value="red" /> red
+    <input type="radio" name="color" value="green" checked /> green
+    <input type="radio" name="color" value="blue" /> blue
+
+    <!-- UnderstandingCoreConcepts: reference radio control index in group-->
+    <input type="radio" name="" value="" checked /> red
+    <input type="radio" name="" value="" checked /> green
+    <input type="radio" name="" value="" checked /> blue
+    <script>
+      var chk = document.getElementsByName('color')[1]; // selecting index 1
+      chk.checked = true;
+    </script>
+
+    <!-- UnderstandingCoreConcepts: -->
+
+    <!-- UnderstandingCoreConcepts: -->
+
+    <!-- UnderstandingCoreConcepts: -->
+
     <!-- UnderstandingCoreConcepts: -->
 
     <!-- UnderstandingCoreConcepts: -->
