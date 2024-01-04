@@ -64,15 +64,52 @@
     <!-- UnderstandingCoreConcepts: Text control-->
     <input type="text" name="color" value="red" />
 
-    <!-- UnderstandingCoreConcepts: -->
+    <!-- UnderstandingCoreConcepts: text control pattern attribute -->
+    <input
+      type="text"
+      name="num"
+      pattern="[a-z]{3}"
+      title="Enter three letters from a to z"
+    />
 
-    <!-- UnderstandingCoreConcepts: -->
+    <!-- UnderstandingCoreConcepts: text field placeholder attribute -->
+    <input type="text" name="color" placeholder="Enter your favorite color" />
 
-    <!-- UnderstandingCoreConcepts: -->
+    <!-- UnderstandingCoreConcepts: password control-->
+    <input type="password" name="password" />
 
-    <!-- UnderstandingCoreConcepts: -->
+    <!-- UnderstandingCoreConcepts: reference the password control with JavaScript-->
+    <input type="password" value="secret" id="secureValue" />
+    <script>
+      let secureValue = document.getElementById('secureValue');
+      console.log(secureValue.value);
+    </script>
 
-    <!-- UnderstandingCoreConcepts: -->
+    <!-- UnderstandingCoreConcepts: email, tel, url controls-->
+    <input type="email" name="email" />
+    <input type="tel" name="phone" />
+    <input type="url" name="website" />
+
+    <!-- UnderstandingCoreConcepts: hidden control-->
+    <input type="hidden" name="id" value="123" />
+
+    <!-- UnderstandingCoreConcepts: number field-->
+    <input type="number" name="quantity" />
+
+    <!-- UnderstandingCoreConcepts: min, max attributes-->
+    <input type="number" name="quantity" min="1" max="10" />
+
+    <!-- UnderstandingCoreConcepts: min max step attribute-->
+    <input type="number" name="quantity" min="-100" max="100000" step="50" />
+    <input type="number" name="quantity" min="1" max="10" step="2" />
+
+    <!-- UnderstandingCoreConcepts: image control-->
+    <input type="image" src="/images/submit.png" />
+
+    <!-- UnderstandingCoreConcepts: image input control-->
+    <form method="GET" action="/handler.php">
+      <input type="image" src="/images/submit.png" />
+    </form>
 
     <!-- UnderstandingCoreConcepts: -->
 
