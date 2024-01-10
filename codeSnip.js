@@ -547,9 +547,22 @@ let desc2 = document.getElementsByName('description2')[0].value;
 console.log(desc2.value); // => outputs 'Some default text' from the textarea
 desc2.value = 'Some new text 2'; // => changes the value of the textarea to 'Some new text 2'
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: query select control value
+let select = document.getElementsByName('mySelect')[0];
+console.log(select.value); // => outputs '1'
 
-//@ UnderstandingCoreConcepts:
+let select2 = document.getElementsByName('mySelect2')[0].value;
+console.log(select2.selectedIndex); // => outputs numerical index of selected option
+
+//@ UnderstandingCoreConcepts: loop to discern select control options
+let selectedItems1 = [];
+let select3 = document.getElementsByName('mySelect3')[0];
+for (let option of select3.options) {
+  if (option.selected) {
+    selectedItems1.push(option.value);
+  }
+}
+console.log(selectedItems1); // => outputs array of selected values ['1', '2']
 
 //@ UnderstandingCoreConcepts:
 
