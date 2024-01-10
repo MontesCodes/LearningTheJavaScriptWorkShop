@@ -539,7 +539,13 @@ const validate = () => {
 
 $('#email').on('input', validate);
 
-//@ UnderstandingCoreConcepts:
+//@ UnderstandingCoreConcepts: textarea value attribute in JavaScript
+let desc = document.getElementsByName('description')[0];
+console.log(desc.value); // => outputs 'Some default text'
+desc.value = 'Some new text'; // => changes the value of the textarea to 'Some new text'
+let desc2 = document.getElementsByName('description2')[0].value;
+console.log(desc2.value); // => outputs 'Some default text' from the textarea
+desc2.value = 'Some new text 2'; // => changes the value of the textarea to 'Some new text 2'
 
 //@ UnderstandingCoreConcepts:
 
